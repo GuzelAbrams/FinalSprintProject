@@ -12,8 +12,8 @@ public class RecomendedList {
 
     @When("^I search (.*) using search box$")
 
-    public void searchInSearchBox(){
-        landingPage.searchInSearchBox("Harry");
+    public void searchInSearchBox(String text){
+        landingPage.searchInSearchBox(text);
     }
 
     @When ("^I click on 'star' icon$")

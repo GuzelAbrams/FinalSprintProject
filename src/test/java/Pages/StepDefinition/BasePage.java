@@ -3,9 +3,7 @@ package Pages.StepDefinition;
 import Drivers.Web;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.*;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -208,6 +206,12 @@ public class BasePage {
             texts.add(element.getText());
         }return texts;
 
+
+    }
+    public void explicitWaitMethod(By loc){
+        WebDriverWait eWait = new WebDriverWait(Web.getDriver(), 10);
+      //  eWait.until(ExpectedConditions.elementToBeClickable(loc));
+        eWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(loc));
 
     }
 

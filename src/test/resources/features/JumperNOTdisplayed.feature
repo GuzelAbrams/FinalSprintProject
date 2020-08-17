@@ -1,7 +1,9 @@
+@yto @regression
 Feature: Jumper is not displayed
 
   Scenario: Jumper is not displayed
 
+  @yto-1
 Given I am on the Homepage
 When I Login
 And I go to YTO page

@@ -14,8 +14,9 @@ public class JumperIsDisplayed {
     @Given("^I am on the Homepage$")
 
     public void launchingHomePage(){
-
         Web.inItDriver("https://clubs3qa1.scholastic.com/home");
+        String expectedPagetitle = "";
+        Assert.assertEquals(Web.getDriver().getTitle(), expectedPagetitle);
     }
 
     @When ( "^I go to YTO page$")
@@ -38,7 +39,6 @@ public class JumperIsDisplayed {
     @Then("^I verify jumper with text is displayed$")
     public void jumperIsDisplayed(){
         Assert.assertTrue(landingPage.isDisplayedJumper(), "Jumper is not displayed");
-
     }
 
     @Then ("^I verify jumper is NOT displayed$")

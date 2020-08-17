@@ -10,13 +10,10 @@ public class UpdatedName {
     LandingPage landingPage = new LandingPage();
 
     @When ("^I update the name to (.*)$")
-
     public void updateName(String name){
-
-
       landingPage.updateName(name);
-
     }
+
     @Then( "^I verify name to (.*) is updated successfully in My Accounts$")
 
     public void verifyNameUpdateInMyAccount(String name){

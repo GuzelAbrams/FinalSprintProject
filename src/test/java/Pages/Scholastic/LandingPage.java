@@ -276,6 +276,7 @@ public class LandingPage extends BasePage {
 
         }
     public void clickSaveButton(){
+
         clickThis(saveButtonLocator);
         try {
             Thread.sleep(10000);
@@ -326,11 +327,7 @@ public class LandingPage extends BasePage {
 
     public void searchInSearchBox(String nameOfItem){
         type(searchBoxLocator, nameOfItem);
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        explicitWaitMethod(searchButtonLocator);
         clickThis(searchButtonLocator);
         try {
             Thread.sleep(10000);
